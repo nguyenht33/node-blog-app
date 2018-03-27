@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.get('/blog-posts', (req, res) => {
 	BlogPost
 		.find()
-		.limit(10)
+		.limit(5)
 		.then(blogPosts => {
 			console.log(blogPosts)
 			res.json({
